@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.app {
+  background: white;
+  width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+}
+
+#addTaskBtn {
+  padding: 10px 16px;
+  background-color: #57e52c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#addTaskBtn:hover {
+  background-color: #1a5fd6;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filterBtn, #clearAllBtn {
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.filterBtn.active {
+  background-color: #2c7be5;
+  color: white;
+}
+
+.filterBtn:hover, #clearAllBtn:hover {
+  background-color: #cbd5e0;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+li {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #e6f0ff;
+}
+
+.task-text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+button.taskBtn {
+  border: none;
+  background: #2c7be5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  user-select: none;
+}
+
+button.taskBtn.deleteBtn {
+  background: #e55353;
+}
+
+button.taskBtn.deleteBtn:hover {
+  background: #c12e2e;
+}
+
+button.taskBtn.doneBtn {
+  background: #2ecc71;
+}
+
+button.taskBtn.doneBtn:hover {
+  background: #219150;
+}
+
+button.taskBtn.editBtn {
+  background: #f0ad4e;
+  color: black;
+}
+
+button.taskBtn.editBtn:hover {
+  background: #d406c6;
+}
+
+input.editInput {
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #2c7be5;
+  margin-right: 10px;
+}
